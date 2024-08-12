@@ -22,7 +22,7 @@ function HowItWorks() {
             How it works?
           </h2>
           <div className="w-full sm:w-max sm:mx-auto">
-            <p className="text-stone-600 text-xs sm:text-sm -tracking-tighter max-w-prose text-pretty text-center">
+            <p className="text-stone-600 text-sm sm:text-base -tracking-tighter max-w-prose text-pretty text-center">
               Learn the essentials of buying or selling a property. Our
               step-by-step guides will walk you through each process.
             </p>
