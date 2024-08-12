@@ -1,5 +1,6 @@
 import Image from "next/image";
 import MaxWidthWrapper from "./MaxWidthWrapper";
+import BlurFade from "./magicui/blur-fade";
 
 function Networks() {
   return (
@@ -122,89 +123,98 @@ function Networks() {
             />
           </div>
           <div className="lg:mt-24 mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 w-full">
-            <div className="xl:shadow-xl mx-auto max-w-lg flex items-center justify-center flex-col md:flex-row xl:flex-col xl:items-start bg-white rounded-lg pt-0 p-2 pb-6 w-full">
-              <div className="relative aspect-square size-32 md:size-28 lg:size-24 overflow-hidden">
-                <Image
-                  fill
-                  className="object-cover"
-                  src={
-                    "https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/rmtn3r5zpsljdsncbwa4/image-007"
-                  }
-                  alt=""
-                />
+            <BlurFade delay={0.25} inView>
+              <div className="h-full xl:shadow-xl mx-auto max-w-lg flex items-center justify-center flex-col md:flex-row xl:flex-col xl:items-start bg-white rounded-lg pt-0 p-2 pb-6 w-full">
+                <div className="relative aspect-square size-32 md:size-28 lg:size-24 overflow-hidden">
+                  <Image
+                    fill
+                    className="object-cover"
+                    src={
+                      "https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/rmtn3r5zpsljdsncbwa4/image-007"
+                    }
+                    alt=""
+                  />
+                </div>
+                <div className="px-5 space-y-2">
+                  <p className="text-center md:text-left text-stone-800 font-semibold lg:text-lg">
+                    Responsive
+                  </p>
+                  <p className="text-center md:text-left text-balance -tracking-tighter text-stone-600">
+                    I am always available via phone, text, or email.
+                  </p>
+                </div>
               </div>
-              <div className="px-5 space-y-2">
-                <p className="text-center md:text-left text-stone-800 font-semibold lg:text-lg">
-                  Responsive
-                </p>
-                <p className="text-center md:text-left text-balance -tracking-tighter text-stone-600">
-                  I am always available via phone, text, or email.
-                </p>
+            </BlurFade>
+            <BlurFade delay={0.5} inView>
+              <div className="h-full xl:shadow-xl mx-auto max-w-lg flex items-center justify-center flex-col md:flex-row xl:flex-col xl:items-start bg-white rounded-lg pt-0 p-2 pb-6 w-full">
+                <div className="relative aspect-square size-32 md:size-28 lg:size-24 overflow-hidden">
+                  <Image
+                    fill
+                    className="object-cover"
+                    src={
+                      "https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/ks8ztlvw2b35q5qgs6xn/image-011"
+                    }
+                    alt=""
+                  />
+                </div>
+                <div className="px-5 space-y-2">
+                  <p className="text-center md:text-left text-stone-800 font-semibold lg:text-lg">
+                    Syndication
+                  </p>
+                  <p className="text-center md:text-left text-balance -tracking-tighter text-stone-600">
+                    I market your property locally, nationally, and
+                    internationally.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="xl:shadow-xl mx-auto max-w-lg flex items-center justify-center flex-col md:flex-row xl:flex-col xl:items-start bg-white rounded-lg pt-0 p-2 pb-6 w-full">
-              <div className="relative aspect-square size-32 md:size-28 lg:size-24 overflow-hidden">
-                <Image
-                  fill
-                  className="object-cover"
-                  src={
-                    "https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/ks8ztlvw2b35q5qgs6xn/image-011"
-                  }
-                  alt=""
-                />
+            </BlurFade>
+            <BlurFade delay={0.75} inView>
+              <div className="h-full xl:shadow-xl mx-auto max-w-lg flex items-center justify-center flex-col md:flex-row xl:flex-col xl:items-start bg-white rounded-lg pt-0 p-2 pb-6 w-full">
+                <div className="relative aspect-square size-32 md:size-28 lg:size-24 overflow-hidden">
+                  <Image
+                    fill
+                    className="object-cover"
+                    src={
+                      "https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/zr3bugldblvebixagfs1/image-009"
+                    }
+                    alt=""
+                  />
+                </div>
+                <div className="px-5 space-y-2">
+                  <p className="text-center md:text-left text-stone-800 font-semibold lg:text-lg">
+                    Virtual Tour
+                  </p>
+                  <p className="text-center md:text-left text-balance -tracking-tighter text-stone-600">
+                    Let&apos;s make your home stand out with a high quality
+                    virtual tour.
+                  </p>
+                </div>
               </div>
-              <div className="px-5 space-y-2">
-                <p className="text-center md:text-left text-stone-800 font-semibold lg:text-lg">
-                  Syndication
-                </p>
-                <p className="text-center md:text-left text-balance -tracking-tighter text-stone-600">
-                  I market your property locally, nationally, and
-                  internationally.
-                </p>
+            </BlurFade>
+            <BlurFade delay={1} inView>
+              <div className="h-full xl:shadow-xl mx-auto max-w-lg flex items-center justify-center flex-col md:flex-row xl:flex-col xl:items-start bg-white rounded-lg pt-0 p-2 pb-6 w-full">
+                <div className="relative aspect-square size-32 md:size-28 lg:size-24 overflow-hidden">
+                  <Image
+                    fill
+                    className="object-cover"
+                    src={
+                      "https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/qljffx423kswkhh1oyc3/image-081"
+                    }
+                    alt=""
+                  />
+                </div>
+
+                <div className="px-5 space-y-2">
+                  <p className="text-center md:text-left text-stone-800 font-semibold lg:text-lg">
+                    Drone Photography
+                  </p>
+                  <p className="text-center md:text-left text-balance -tracking-tighter text-stone-600 max-w-[40ch]">
+                    Beautiful photography is a central part of our marketing
+                    plan for your property.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="xl:shadow-xl mx-auto max-w-lg flex items-center justify-center flex-col md:flex-row xl:flex-col xl:items-start bg-white rounded-lg pt-0 p-2 pb-6 w-full">
-              <div className="relative aspect-square size-32 md:size-28 lg:size-24 overflow-hidden">
-                <Image
-                  fill
-                  className="object-cover"
-                  src={
-                    "https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/zr3bugldblvebixagfs1/image-009"
-                  }
-                  alt=""
-                />
-              </div>
-              <div className="px-5 space-y-2">
-                <p className="text-center md:text-left text-stone-800 font-semibold lg:text-lg">
-                  Virtual Tour
-                </p>
-                <p className="text-center md:text-left text-balance -tracking-tighter text-stone-600">
-                  Let&apos;s make your home stand out with a high quality
-                  virtual tour.
-                </p>
-              </div>
-            </div>
-            <div className="xl:shadow-xl mx-auto max-w-lg flex items-center justify-center flex-col md:flex-row xl:flex-col xl:items-start bg-white rounded-lg pt-0 p-2 pb-6 w-full">
-              <div className="relative aspect-square size-32 md:size-28 lg:size-24 overflow-hidden">
-                <Image
-                  fill
-                  className="object-cover"
-                  src={
-                    "https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/qljffx423kswkhh1oyc3/image-081"
-                  }
-                  alt=""
-                />
-              </div>
-              <div className="px-5 space-y-2">
-                <p className="text-center md:text-left text-stone-800 font-semibold lg:text-lg">
-                  Drone Photography
-                </p>
-                <p className="text-center md:text-left text-balance -tracking-tighter text-stone-600 max-w-[40ch]">
-                  Beautiful photography is a central part of our marketing plan
-                  for your property.
-                </p>
-              </div>
-            </div>
+            </BlurFade>
           </div>
         </div>
       </MaxWidthWrapper>

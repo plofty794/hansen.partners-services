@@ -2,6 +2,7 @@ import Image from "next/image";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { Separator } from "./ui/separator";
 import BookNowDialog from "./BookNowDialog";
+import BlurFade from "./magicui/blur-fade";
 
 function StagingAndPreparation() {
   return (
@@ -15,7 +16,11 @@ function StagingAndPreparation() {
               </h2>
             </div>
             <div className=" grid gap-2 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-4 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
-              <div className="relative w-full h-44 rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full overflow-hidden">
+              <BlurFade
+                className="relative w-full h-44 rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full overflow-hidden"
+                delay={0.25}
+                inView
+              >
                 <Image
                   src="https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/axx0whb7xfmlwhvcckrr/image-023"
                   alt=""
@@ -23,8 +28,13 @@ function StagingAndPreparation() {
                   loading="lazy"
                   fill
                 />
-              </div>
-              <div className="relative hidden w-full h-52 rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32 overflow-hidden">
+              </BlurFade>
+
+              <BlurFade
+                className="relative hidden w-full h-52 rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32 overflow-hidden"
+                delay={0.5}
+                inView
+              >
                 <Image
                   src="https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/tvntwvzwsjyi3ndwtpux/image-022"
                   alt=""
@@ -32,8 +42,12 @@ function StagingAndPreparation() {
                   loading="lazy"
                   fill
                 />
-              </div>
-              <div className="relative overflow-hidden hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32">
+              </BlurFade>
+              <BlurFade
+                className="relative overflow-hidden hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32"
+                delay={0.75}
+                inView
+              >
                 <Image
                   src="https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/lpaq7euqjebackcuwsdu/image-024"
                   alt=""
@@ -41,7 +55,7 @@ function StagingAndPreparation() {
                   loading="lazy"
                   fill
                 />
-              </div>
+              </BlurFade>
             </div>
             <div className="mt-4 flex gap-2 items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-4 lg:row-start-2">
               <p className="text-stone-600 text-sm md:text-base -tracking-tighter">

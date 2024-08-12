@@ -67,7 +67,7 @@ function SubscribeToNewsLetter() {
   return (
     <Card className="grid grid-cols-1 md:grid-cols-[200px_1fr] mx-auto mt-8 md:mt-12 lg:mt-24 max-w-2xl shadow-xl">
       <div className="flex items-center justify-center w-full h-full p-4">
-        <Lottie animationData={newsletter} />;
+        <Lottie loop={false} animationData={newsletter} />;
       </div>
       <div>
         <CardHeader>

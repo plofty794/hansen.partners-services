@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { BUYING_PROCESS, SELLING_PROCESS } from "@/constants";
 import { useMediaQuery } from "usehooks-ts";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function HowItWorks() {
   const matches = useMediaQuery("(min-width: 768px)");
@@ -67,7 +68,18 @@ function HowItWorks() {
                 value="selling"
               >
                 {SELLING_PROCESS.map((process, idx) => (
-                  <div
+                  <motion.div
+                    initial={{
+                      x: -100,
+                      opacity: 0,
+                    }}
+                    transition={{
+                      delay: 0.25,
+                    }}
+                    animate={{
+                      x: 0,
+                      opacity: 1,
+                    }}
                     key={process.title}
                     className="w-full grid grid-cols-[50px_auto] items-center justify-center md:items-start md:grid-cols-[100px_auto_1fr]"
                   >
@@ -96,7 +108,7 @@ function HowItWorks() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </TabsContent>
               <TabsContent
@@ -104,7 +116,18 @@ function HowItWorks() {
                 value="buying"
               >
                 {BUYING_PROCESS.map((process, idx) => (
-                  <div
+                  <motion.div
+                    initial={{
+                      x: -100,
+                      opacity: 0,
+                    }}
+                    transition={{
+                      delay: 0.25,
+                    }}
+                    animate={{
+                      x: 0,
+                      opacity: 1,
+                    }}
                     key={process.title}
                     className="w-full grid grid-cols-[50px_auto] items-center justify-center md:items-start md:grid-cols-[100px_auto_1fr]"
                   >
@@ -133,7 +156,7 @@ function HowItWorks() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </TabsContent>
             </div>

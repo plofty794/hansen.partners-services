@@ -14,7 +14,7 @@ import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 import { PaperPlaneIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
-import { ScrollArea } from "./ui/scroll-area";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 function BookNowDialog({
@@ -107,7 +107,18 @@ function BookNowDialog({
         </div>
 
         {isChecked ? (
-          <div className="h-full md:px-4">
+          <motion.div
+            transition={{ type: "spring", bounce: 0.25 }}
+            initial={{
+              opacity: 0,
+              y: 100,
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+            }}
+            className="h-full md:px-4"
+          >
             <DialogHeader className="flex flex-row gap-4">
               <div className="px-3 py-2 rounded-lg border shadow-lg w-max h-max bg-white">
                 <svg
@@ -158,39 +169,53 @@ function BookNowDialog({
                 Send <PaperPlaneIcon className="size-5" />
               </Button>
             </form>
-          </div>
+          </motion.div>
         ) : (
-          <div className="h-full flex flex-col justify-center gap-4 px-2">
-            <div className="flex flex-col justify-between gap-4">
-              <DialogHeader>
-                <DialogTitle className="text-lg text-stone-800">
-                  Terms and Agreements
-                </DialogTitle>
-              </DialogHeader>
-              <div className="space-y-4">
-                <p className="text-sm -tracking-tighter text-pretty max-w-prose  text-stone-600">
-                  By providing your contact information, you agree to our{" "}
-                  <span className="underline text-black">Privacy Policy</span>{" "}
-                  and consent to receive marketing communications via calls,
-                  texts, and emails, including automated messages.
-                </p>
-                <p className="text-sm -tracking-tighter text-pretty max-w-prose  text-stone-600">
-                  Consent isn’t required for purchases, and you can opt out
-                  anytime. Reply &lsquo;stop&rsquo; to texts or use the
-                  unsubscribe link in emails. Message and data rates may apply.
-                </p>
-              </div>
-            </div>
-            <Button
-              onClick={() => {
-                setIsChecked(true);
+          <AnimatePresence>
+            <motion.div
+              initial={{
+                opacity: 0,
               }}
-              size={"lg"}
-              className="mt-4 w-max ml-auto"
+              transition={{
+                delay: 0.25,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              className="h-full flex flex-col justify-center gap-4 px-2"
             >
-              I agree
-            </Button>
-          </div>
+              <div className="flex flex-col justify-between gap-4">
+                <DialogHeader>
+                  <DialogTitle className="text-lg text-stone-800">
+                    Terms and Agreements
+                  </DialogTitle>
+                </DialogHeader>
+                <div className="space-y-4">
+                  <p className="text-sm -tracking-tighter text-pretty max-w-prose  text-stone-600">
+                    By providing your contact information, you agree to our{" "}
+                    <span className="underline text-black">Privacy Policy</span>{" "}
+                    and consent to receive marketing communications via calls,
+                    texts, and emails, including automated messages.
+                  </p>
+                  <p className="text-sm -tracking-tighter text-pretty max-w-prose  text-stone-600">
+                    Consent isn’t required for purchases, and you can opt out
+                    anytime. Reply &lsquo;stop&rsquo; to texts or use the
+                    unsubscribe link in emails. Message and data rates may
+                    apply.
+                  </p>
+                </div>
+              </div>
+              <Button
+                onClick={() => {
+                  setIsChecked(true);
+                }}
+                size={"lg"}
+                className="mt-4 w-max ml-auto"
+              >
+                I agree
+              </Button>
+            </motion.div>
+          </AnimatePresence>
         )}
       </DialogContent>
     </Dialog>
