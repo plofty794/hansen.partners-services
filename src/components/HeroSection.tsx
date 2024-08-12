@@ -15,7 +15,7 @@ function HeroSection() {
           />
         </div>
         <div className="absolute z-20">
-          <BlurFade delay={0.25} inView>
+          <BlurFade delay={0.5} inView>
             <h1 className="font-semibold -tracking-tighter text-6xl md:text-7xl text-white">
               Services
             </h1>
