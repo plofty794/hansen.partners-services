@@ -66,6 +66,17 @@ function DesktopNavigation() {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/#" legacyBehavior passHref>
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle({
+                  className: "text-stone-800",
+                })}
+              >
+                Search for Homes
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
       <SearchLocation />
