@@ -148,21 +148,21 @@ function BookNowDialog({
             <form className="mt-8 h-full flex flex-col gap-2">
               <div>
                 <Label className="text-stone-600">Email*</Label>
-                <Input autoFocus />
+                <Input required type="email" autoFocus />
               </div>
               <div className="w-full flex flex-col md:flex-row gap-4">
                 <div className="w-full">
                   <Label className="text-stone-600">Phone*</Label>
-                  <Input />
+                  <Input required type="tel" />
                 </div>
                 <div className="w-full">
                   <Label className="text-stone-600">Name*</Label>
-                  <Input />
+                  <Input required />
                 </div>
               </div>
               <div className="mt-4">
                 <Label className="text-stone-600">Your message*</Label>
-                <Textarea className="max-h-60" />
+                <Textarea required className="max-h-60" />
               </div>
 
               <Button size={"lg"} className="mt-4 md:mt-8 gap-2">
