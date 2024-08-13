@@ -30,7 +30,7 @@ function HowItWorks() {
         </div>
         <div className="w-full mt-8 md:mt-12">
           <Tabs onValueChange={(v) => setSelectedTab(v)} defaultValue="selling">
-            <TabsList className="mt-4 px-4 md:px-0 w-full items-center md:justify-start gap-2 md:gap-4 bg-white p-0">
+            <TabsList className="mt-4 px-4 md:px-0 w-full items-center gap-2 md:gap-4 bg-white p-0">
               <TabsTrigger
                 className={buttonVariants({
                   variant: "secondary",
@@ -38,8 +38,8 @@ function HowItWorks() {
                   className: cn(
                     "-tracking-tighter text-stone-800 w-full md:w-max",
                     selectedTab === "selling"
-                      ? "ring-2 ring-offset-1 ring-stone-600 font-semibold"
-                      : "ring-0 text-stone-600"
+                      ? "ring-2 ring-offset-1 ring-stone-600 font-bold opacity-1"
+                      : "ring-0 text-stone-600 opacity-70"
                   ),
                 })}
                 value="selling"
@@ -53,8 +53,8 @@ function HowItWorks() {
                   className: cn(
                     "-tracking-tighter text-stone-800 w-full md:w-max",
                     selectedTab === "buying"
-                      ? "ring-2 ring-offset-1 ring-stone-600 font-semibold"
-                      : "ring-0 text-stone-600"
+                      ? "ring-2 ring-offset-1 ring-stone-600 font-bold opacity-1"
+                      : "ring-0 text-stone-600 opacity-70"
                   ),
                 })}
                 value="buying"
